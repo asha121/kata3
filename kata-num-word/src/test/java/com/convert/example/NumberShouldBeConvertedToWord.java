@@ -41,5 +41,9 @@ public class NumberShouldBeConvertedToWord {
 	public void check_for_25_convert_tweentyfive() throws Exception {
 		assertEquals("TWENTY FIVE ", new NumberToWord().convert(25));
 	}
+	@Test
+	public void check_for_50_convert_fifty() throws Exception {
+		assertEquals("FIFTY ", new NumberToWord().convert(25));
+	}
 
 }
