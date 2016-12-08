@@ -5,12 +5,17 @@ public class NumberToWord {
 	public String convert(int i) {
 		String[] ones = { "0 NOT A POSTIVE INTEGER", "ONE", "TWO", "THREE", "FOUR", "FIVE", "SIX", "SEVEN", "EIGHT",
 				"NINE" };
-		if (i > 10)
+		String[] teen = { "TEN", "ELEVEN", "TWELVE", "THIRTEEN", "FOURTEEN", "FIFTEEN", "SIXTEEN", "SEVENTEEN",
+				"EIGHTEEN", "NINETEEN" };
+		if (i < 10)
 
 		{
-			return "TWENTY THREE";
+			return ones[i];
+
+		} else if (i < 20) {
+			return teen[i - 10];
 		}
-		return ones[i];
+		return "TWENTY THREE";
 	}
 
 }
