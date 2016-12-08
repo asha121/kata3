@@ -51,7 +51,18 @@ public class NumberShouldBeConvertedToWord {
 	}
 	@Test
 	public void check_for_100_convert_hundred() throws Exception {
-		System.out.println(new NumberToWord().convert(100));
 		assertEquals("ONE HUNDRED ", new NumberToWord().convert(100));
+	}
+	@Test
+	public void check_for_120_convert_hundredtwenty() throws Exception {
+		assertEquals("ONE HUNDRED TWENTY ", new NumberToWord().convert(120));
+	}
+	@Test
+	public void check_for_179_convert_hundred_seventy_nine() throws Exception {
+		assertEquals("ONE HUNDRED SEVENTY NINE ", new NumberToWord().convert(179));
+	}
+	@Test
+	public void check_for_998_convert_nine_hundred_ninety() throws Exception {
+		assertEquals("NINE HUNDRED NINETY EIGHT ", new NumberToWord().convert(998));
 	}
 }
