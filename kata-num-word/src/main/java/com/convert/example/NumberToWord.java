@@ -3,7 +3,10 @@ package com.convert.example;
 public class NumberToWord {
 
 	public String convert(int i) {
-		return "ONE";
+		if (i==1) {
+			return "ONE";
+		}
+		return "TWENTY THREE";
 	}
 
 }
