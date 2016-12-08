@@ -3,13 +3,11 @@ package com.convert.example;
 public class NumberToWord {
 
 	public String convert(int i) {
-		String word = "";
-		if (i == 1) {
-			word = "ONE";
-		} else {
-			word = "TWENTY THREE";
+		String[] words = {"ONE", "TWO" };
+		if (i>2) {
+			return "TWENTY THREE";
 		}
-		return word;
+		return words[--i];
 	}
 
 }
