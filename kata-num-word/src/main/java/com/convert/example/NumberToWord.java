@@ -16,8 +16,17 @@ public class NumberToWord {
 		} else if (number < 20) {
 			word = teen[number - 10];
 		} else if (number < 100) {
-			char digit[] = (number + "").toCharArray();
-			int count = 0;
+			word = digitNumber(number, word, ones, enty, maxs);
+		} else if (number < 1000) {
+			word = digitNumber(number, word, ones, enty, maxs);
+		}
+		return word;
+	}
+
+	private String digitNumber(int number, String word, String[] ones, String[] enty, String[] maxs) {
+		char digit[] = (number + "").toCharArray();
+		int count = 0;
+		if (number == 99) {
 			for (char charNum : digit) {
 				if (count == 0) {
 					word = enty[Integer.parseInt(Character.toString(charNum)) - 2];
@@ -27,9 +36,7 @@ public class NumberToWord {
 				}
 
 			}
-		} else if (number < 1000) {
-			char digit[] = (number + "").toCharArray();
-			int count = 0;
+		} else {
 			for (char charNum : digit) {
 				if (charNum != '0') {
 					if (count == 0) {
@@ -45,6 +52,7 @@ public class NumberToWord {
 
 			}
 		}
+
 		return word;
 	}
 }
