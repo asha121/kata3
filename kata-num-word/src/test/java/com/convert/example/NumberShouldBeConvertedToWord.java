@@ -14,5 +14,9 @@ public class NumberShouldBeConvertedToWord {
 	public void check_23_converted_twenty_three() {
 		assertEquals("TWENTY THREE", new NumberToWord().convert(23));
 	}
-	//456 -> FOUR HUNDRED AND FIFTY SIX
+	@Test
+	public void check_2_convert_Two() {
+		assertEquals("TWO", new NumberToWord().convert(2));
+	}
+	
 }
