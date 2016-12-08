@@ -15,6 +15,9 @@ public class NumberToWord {
 		} else if (i < 20) {
 			return teen[i - 10];
 		}
+		else if (i == 20) {
+			return "TWENTY";
+		}
 		return "TWENTY THREE";
 	}
 

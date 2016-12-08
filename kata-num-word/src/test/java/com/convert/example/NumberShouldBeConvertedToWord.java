@@ -35,7 +35,7 @@ public class NumberShouldBeConvertedToWord {
 	}
 	@Test
 	public void check_for_20_convert_tweenty() throws Exception {
-		assertEquals("TWEENTY", new NumberToWord().convert(20));
+		assertEquals("TWENTY", new NumberToWord().convert(20));
 	}
 
 }
