@@ -26,7 +26,7 @@ public class NumberToWord {
 	private String digitNumber(int number, String word, String[] ones, String[] enty, String[] maxs) {
 		char digit[] = (number + "").toCharArray();
 		int count = 0;
-		if (number == 99) {
+		if (number < 100) {
 			for (char charNum : digit) {
 				if (count == 0) {
 					word = enty[Integer.parseInt(Character.toString(charNum)) - 2];
