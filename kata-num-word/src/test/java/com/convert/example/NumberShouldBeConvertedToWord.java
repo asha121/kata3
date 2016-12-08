@@ -43,7 +43,7 @@ public class NumberShouldBeConvertedToWord {
 	}
 	@Test
 	public void check_for_50_convert_fifty() throws Exception {
-		assertEquals("FIFTY ", new NumberToWord().convert(25));
+		assertEquals("FIFTY ", new NumberToWord().convert(50));
 	}
 
 }
