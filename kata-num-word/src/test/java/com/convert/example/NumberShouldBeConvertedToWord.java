@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class NumberShouldBeConvertedToWord {
 
-	@Test
+	/*@Test
 	public void check_1_converted_one() throws Exception {
 		assertEquals("ONE", new NumberToWord().convert(1));
 	}
@@ -36,6 +36,11 @@ public class NumberShouldBeConvertedToWord {
 	@Test
 	public void check_for_20_convert_tweenty() throws Exception {
 		assertEquals("TWENTY", new NumberToWord().convert(20));
+	}*/
+	@Test
+	public void check_for_25_convert_tweentyfive() throws Exception {
+		System.out.println(new NumberToWord().convert(25));
+		assertEquals("TWENTY FIVE ", new NumberToWord().convert(25));
 	}
 
 }
