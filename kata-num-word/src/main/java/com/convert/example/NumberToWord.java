@@ -50,10 +50,12 @@ public class NumberToWord {
 					} else if (Integer.parseInt(Character.toString(charNum)) != 0) {
 						word += ones[Integer.parseInt(Character.toString(charNum))];
 					}
+				} else {
+					count++;
 				}
 
 			}
-		}else if (digit.length == 4) {
+		} else if (digit.length == 4) {
 			for (char charNum : digit) {
 				if (charNum != '0') {
 					if (count == 0) {
@@ -63,8 +65,8 @@ public class NumberToWord {
 						word += ones[Integer.parseInt(Character.toString(charNum))] + maxs[0];
 						count++;
 					} else if (count == 2) {
-						word += enty[Integer.parseInt(Character.toString(charNum))-2];
-					}else if (Integer.parseInt(Character.toString(charNum)) != 0) {
+						word += enty[Integer.parseInt(Character.toString(charNum)) - 2];
+					} else if (Integer.parseInt(Character.toString(charNum)) != 0) {
 						word += ones[Integer.parseInt(Character.toString(charNum))];
 					}
 				}

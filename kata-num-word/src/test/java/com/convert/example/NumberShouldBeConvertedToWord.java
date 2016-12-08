@@ -25,57 +25,74 @@ public class NumberShouldBeConvertedToWord {
 	public void check_for_0_convert_zero() throws Exception {
 		assertEquals("0 NOT A POSTIVE INTEGER", new NumberToWord().convert(0));
 	}
+
 	@Test
 	public void check_for_11_convert_eleven() throws Exception {
 		assertEquals("ELEVEN ", new NumberToWord().convert(11));
 	}
+
 	@Test
 	public void check_for_19_convert_ninteen() throws Exception {
 		assertEquals("NINETEEN", new NumberToWord().convert(19));
 	}
+
 	@Test
 	public void check_for_20_convert_tweenty() throws Exception {
 		assertEquals("TWENTY ", new NumberToWord().convert(20));
 	}
+
 	@Test
 	public void check_for_25_convert_tweentyfive() throws Exception {
 		assertEquals("TWENTY FIVE ", new NumberToWord().convert(25));
 	}
+
 	@Test
 	public void check_for_50_convert_fifty() throws Exception {
 		assertEquals("FIFTY ", new NumberToWord().convert(50));
 	}
+
 	@Test
 	public void check_for_79_convert_seventyNine() throws Exception {
 		assertEquals("SEVENTY NINE ", new NumberToWord().convert(79));
 	}
+
 	@Test
 	public void check_for_100_convert_hundred() throws Exception {
 		assertEquals("ONE HUNDRED ", new NumberToWord().convert(100));
 	}
+
 	@Test
 	public void check_for_120_convert_hundredtwenty() throws Exception {
 		assertEquals("ONE HUNDRED TWENTY ", new NumberToWord().convert(120));
 	}
+
 	@Test
 	public void check_for_179_convert_hundred_seventy_nine() throws Exception {
 		assertEquals("ONE HUNDRED SEVENTY NINE ", new NumberToWord().convert(179));
 	}
+
 	@Test
 	public void check_for_998_convert_nine_hundred_ninety() throws Exception {
 		assertEquals("NINE HUNDRED NINETY EIGHT ", new NumberToWord().convert(998));
 	}
+
 	@Test
 	public void check_for_1000_convert_one_thousand() throws Exception {
 		assertEquals("ONE THOUSAND ", new NumberToWord().convert(1000));
 	}
+
 	@Test
 	public void check_for_1700_convert_one_thousand_seven_hundred() throws Exception {
 		assertEquals("ONE THOUSAND SEVEN HUNDRED ", new NumberToWord().convert(1700));
 	}
+
 	@Test
 	public void check_for_1720_convert_one_thousand_seven_hundred_twenty() throws Exception {
-		System.out.println(new NumberToWord().convert(1720));
 		assertEquals("ONE THOUSAND SEVEN HUNDRED TWENTY ", new NumberToWord().convert(1720));
+	}
+
+	@Test
+	public void check_for_903_convert_nine_hundred_three() throws Exception {
+		assertEquals("NINE HUNDRED THREE ", new NumberToWord().convert(903));
 	}
 }
