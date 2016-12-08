@@ -6,19 +6,19 @@ import org.junit.Test;
 
 public class NumberShouldBeConvertedToWord {
 
-	/*@Test
+	@Test
 	public void check_1_converted_one() throws Exception {
-		assertEquals("ONE", new NumberToWord().convert(1));
+		assertEquals("ONE ", new NumberToWord().convert(1));
 	}
 
 	@Test
 	public void check_23_converted_twenty_three() throws Exception {
-		assertEquals("TWENTY THREE", new NumberToWord().convert(23));
+		assertEquals("TWENTY THREE ", new NumberToWord().convert(23));
 	}
 
 	@Test
 	public void check_2_convert_Two() throws Exception {
-		assertEquals("TWO", new NumberToWord().convert(2));
+		assertEquals("TWO ", new NumberToWord().convert(2));
 	}
 
 	@Test
@@ -27,7 +27,7 @@ public class NumberShouldBeConvertedToWord {
 	}
 	@Test
 	public void check_for_11_convert_eleven() throws Exception {
-		assertEquals("ELEVEN", new NumberToWord().convert(11));
+		assertEquals("ELEVEN ", new NumberToWord().convert(11));
 	}
 	@Test
 	public void check_for_19_convert_ninteen() throws Exception {
@@ -35,11 +35,10 @@ public class NumberShouldBeConvertedToWord {
 	}
 	@Test
 	public void check_for_20_convert_tweenty() throws Exception {
-		assertEquals("TWENTY", new NumberToWord().convert(20));
-	}*/
+		assertEquals("TWENTY ", new NumberToWord().convert(20));
+	}
 	@Test
 	public void check_for_25_convert_tweentyfive() throws Exception {
-		System.out.println(new NumberToWord().convert(25));
 		assertEquals("TWENTY FIVE ", new NumberToWord().convert(25));
 	}
 
