@@ -22,7 +22,7 @@ public class NumberShouldBeConvertedToWord {
 	}
 
 	@Test
-	public void check_for_0_convert_Two() throws Exception {
+	public void check_for_0_convert_zero() throws Exception {
 		assertEquals("0 NOT A POSTIVE INTEGER", new NumberToWord().convert(0));
 	}
 	@Test
@@ -45,5 +45,12 @@ public class NumberShouldBeConvertedToWord {
 	public void check_for_50_convert_fifty() throws Exception {
 		assertEquals("FIFTY ", new NumberToWord().convert(50));
 	}
-
+	@Test
+	public void check_for_79_convert_seventyNine() throws Exception {
+		assertEquals("SEVENTY NINE ", new NumberToWord().convert(79));
+	}
+	@Test
+	public void check_for_100_convert_hundred() throws Exception {
+		assertEquals("HUNDRED ", new NumberToWord().convert(100));
+	}
 }
