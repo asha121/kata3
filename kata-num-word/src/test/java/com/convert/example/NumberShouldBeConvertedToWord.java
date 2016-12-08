@@ -65,4 +65,8 @@ public class NumberShouldBeConvertedToWord {
 	public void check_for_998_convert_nine_hundred_ninety() throws Exception {
 		assertEquals("NINE HUNDRED NINETY EIGHT ", new NumberToWord().convert(998));
 	}
+	@Test
+	public void check_for_1000_convert_one_thousand() throws Exception {
+		assertEquals("ONE THOUSAND ", new NumberToWord().convert(1000));
+	}
 }
