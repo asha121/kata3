@@ -69,4 +69,13 @@ public class NumberShouldBeConvertedToWord {
 	public void check_for_1000_convert_one_thousand() throws Exception {
 		assertEquals("ONE THOUSAND ", new NumberToWord().convert(1000));
 	}
+	@Test
+	public void check_for_1700_convert_one_thousand_seven_hundred() throws Exception {
+		assertEquals("ONE THOUSAND SEVEN HUNDRED ", new NumberToWord().convert(1700));
+	}
+	@Test
+	public void check_for_1720_convert_one_thousand_seven_hundred_twenty() throws Exception {
+		System.out.println(new NumberToWord().convert(1720));
+		assertEquals("ONE THOUSAND SEVEN HUNDRED TWENTY ", new NumberToWord().convert(1720));
+	}
 }
