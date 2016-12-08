@@ -9,6 +9,8 @@ public class NumberToWord {
 		String[] teen = { "TEN ", "ELEVEN ", "TWELVE ", "THIRTEEN ", "FOURTEEN ", "FIFTEEN ", "SIXTEEN ", "SEVENTEEN ",
 				"EIGHTEEN ", "NINETEEN" };
 		String[] enty = { "TWENTY ", "THIRTY ", "FORTY ", "FIFTY ", "SIXTY ", "SEVENTY ", "EIGHTY ", "NINETY " };
+		String[] maxs = { "HUNDRED ", "THOUSAND " };
+
 		if (number < 10) {
 			word = ones[number];
 		} else if (number < 20) {
@@ -20,8 +22,25 @@ public class NumberToWord {
 				if (count == 0) {
 					word = enty[Integer.parseInt(Character.toString(charNum)) - 2];
 					count++;
-				} else if(Integer.parseInt(Character.toString(charNum))!=0) {
+				} else if (Integer.parseInt(Character.toString(charNum)) != 0) {
 					word += ones[Integer.parseInt(Character.toString(charNum))];
+				}
+
+			}
+		} else if (number < 1000) {
+			char digit[] = (number + "").toCharArray();
+			int count = 0;
+			for (char charNum : digit) {
+				if (charNum != '0') {
+					if (count == 0) {
+						word = ones[Integer.parseInt(Character.toString(charNum))] + maxs[0];
+						count++;
+					} else if (count == 1) {
+						word = enty[Integer.parseInt(Character.toString(charNum)) - 2];
+						count++;
+					} else if (Integer.parseInt(Character.toString(charNum)) != 0) {
+						word += ones[Integer.parseInt(Character.toString(charNum))];
+					}
 				}
 
 			}

@@ -51,6 +51,7 @@ public class NumberShouldBeConvertedToWord {
 	}
 	@Test
 	public void check_for_100_convert_hundred() throws Exception {
-		assertEquals("HUNDRED ", new NumberToWord().convert(100));
+		System.out.println(new NumberToWord().convert(100));
+		assertEquals("ONE HUNDRED ", new NumberToWord().convert(100));
 	}
 }
