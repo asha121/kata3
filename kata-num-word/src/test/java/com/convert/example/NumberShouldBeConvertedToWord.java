@@ -29,5 +29,9 @@ public class NumberShouldBeConvertedToWord {
 	public void check_for_11_convert_eleven() throws Exception {
 		assertEquals("ELEVEN", new NumberToWord().convert(11));
 	}
+	@Test
+	public void check_for_19_convert_ninteen() throws Exception {
+		assertEquals("NINETEEN", new NumberToWord().convert(19));
+	}
 
 }
