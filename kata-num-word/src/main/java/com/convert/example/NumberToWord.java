@@ -39,18 +39,22 @@ public class NumberToWord {
 
 			}
 		} else if (digit.length == 3) {
+			String and = "";
 			for (char charNum : digit) {
 				if (charNum != '0') {
 					if (count == 0) {
 						word = ones[Integer.parseInt(Character.toString(charNum))] + maxs[0];
 						count++;
 					} else if (count == 1) {
-						word += enty[Integer.parseInt(Character.toString(charNum)) - 2];
+						word += "AND " + enty[Integer.parseInt(Character.toString(charNum)) - 2];
 						count++;
 					} else if (Integer.parseInt(Character.toString(charNum)) != 0) {
-						word += ones[Integer.parseInt(Character.toString(charNum))];
+						word += and + ones[Integer.parseInt(Character.toString(charNum))];
 					}
 				} else {
+					if (!and.equals("AND ")) {
+						and = "AND ";
+					}
 					count++;
 				}
 
