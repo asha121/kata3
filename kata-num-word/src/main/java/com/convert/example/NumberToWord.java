@@ -10,31 +10,18 @@ public class NumberToWord {
 				"EIGHTEEN ", "NINETEEN" };
 		String[] enty = { "TWENTY ", "THIRTY ", "FORTY ", "FIFTY ", "SIXTY ", "SEVENTY ", "EIGHTY ", "NINETY " };
 		String[] maxs = { "HUNDRED ", "THOUSAND " };
-
+		char digit[] = (number + "").toCharArray();
 		if (number < 10) {
 			word = ones[number];
 		} else if (number < 20) {
 			word = teen[number - 10];
 		} else if (number < 100) {
-			word = digitToNumber(number, word, ones, enty, maxs);
-		} else if (number < 1000) {
-			word = digitToNumber(number, word, ones, enty, maxs);
-		} else if (number >= 1000) {
-			word = digitToNumber(number, word, ones, enty, maxs);
-		}
-		return word;
-	}
-
-	private String digitToNumber(int number, String word, String[] ones, String[] enty, String[] maxs) {
-		char digit[] = (number + "").toCharArray();
-		if (digit.length == 2) {
 			word = twoDigitWord(digit, ones, enty);
-		} else if (digit.length == 3) {
+		} else if (number < 1000) {
 			word = threeDigitWord(digit, ones, enty, maxs);
-		} else if (digit.length == 4) {
+		} else if (number >= 1000) {
 			word = fourDigitFourWord(digit, ones, enty, maxs);
 		}
-
 		return word;
 	}
 
