@@ -5,7 +5,7 @@ import static com.convert.example.DigitFactory.getInstance;
 /**
  * @author asha121 With recursion and member variable implementation
  */
-public class NumberToWord {
+public class IntegerToWord {
 
 	public String digitToWord(int number) {
 		String word = "";
