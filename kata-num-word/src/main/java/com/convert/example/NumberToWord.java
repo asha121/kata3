@@ -1,5 +1,9 @@
 package com.convert.example;
 
+/**
+ * @author asha121
+ *With recursion and member variable implementation
+ */
 public class NumberToWord {
 
 	public String convert(int number) {
@@ -10,17 +14,16 @@ public class NumberToWord {
 				"EIGHTEEN ", "NINETEEN" };
 		String[] enty = { "TWENTY ", "THIRTY ", "FORTY ", "FIFTY ", "SIXTY ", "SEVENTY ", "EIGHTY ", "NINETY " };
 		String[] maxs = { "HUNDRED ", "THOUSAND " };
-		char digit[] = (number + "").toCharArray();
 		if (number < 10) {
 			word = ones[number];
 		} else if (number < 20) {
 			word = teen[number - 10];
 		} else if (number < 100) {
-			word = twoDigitWord(digit, ones, enty);
+			word = twoDigitWord((number + "").toCharArray(), ones, enty);
 		} else if (number < 1000) {
-			word = threeDigitWord(digit, ones, enty, maxs);
+			word = threeDigitWord((number + "").toCharArray(), ones, enty, maxs);
 		} else if (number >= 1000) {
-			word = fourDigitWord(digit, ones, enty, maxs);
+			word = fourDigitWord((number + "").toCharArray(), ones, enty, maxs);
 		}
 		return word;
 	}
