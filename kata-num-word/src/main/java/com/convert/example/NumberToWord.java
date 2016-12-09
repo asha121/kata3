@@ -27,6 +27,7 @@ public class NumberToWord {
 
 	private String digitNumber(int number, String word, String[] ones, String[] enty, String[] maxs) {
 		char digit[] = (number + "").toCharArray();
+		String and = "";
 		int count = 0;
 		if (digit.length == 2) {
 			for (char charNum : digit) {
@@ -39,7 +40,6 @@ public class NumberToWord {
 
 			}
 		} else if (digit.length == 3) {
-			String and = "";
 			for (char charNum : digit) {
 				if (charNum != '0') {
 					if (count == 0) {
@@ -69,10 +69,15 @@ public class NumberToWord {
 						word += ones[Integer.parseInt(Character.toString(charNum))] + maxs[0];
 						count++;
 					} else if (count == 2) {
-						word += enty[Integer.parseInt(Character.toString(charNum)) - 2];
+						word +=  "AND "+enty[Integer.parseInt(Character.toString(charNum)) - 2];
 					} else if (Integer.parseInt(Character.toString(charNum)) != 0) {
-						word += ones[Integer.parseInt(Character.toString(charNum))];
+						word += and+ones[Integer.parseInt(Character.toString(charNum))];
 					}
+				}else{
+					if (!and.equals("AND ")) {
+						and = "AND ";
+					}
+					count++;
 				}
 
 			}

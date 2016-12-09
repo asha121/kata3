@@ -73,7 +73,7 @@ public class NumberShouldBeConvertedToWord {
 
 	@Test
 	public void check_for_998_convert_nine_hundred_ninety() throws Exception {
-		System.out.println( new NumberToWord().convert(998));
+		System.out.println(new NumberToWord().convert(998));
 		assertEquals("NINE HUNDRED AND NINETY EIGHT ", new NumberToWord().convert(998));
 	}
 
@@ -89,7 +89,7 @@ public class NumberShouldBeConvertedToWord {
 
 	@Test
 	public void check_for_1720_convert_one_thousand_seven_hundred_twenty() throws Exception {
-		assertEquals("ONE THOUSAND SEVEN HUNDRED TWENTY ", new NumberToWord().convert(1720));
+		assertEquals("ONE THOUSAND SEVEN HUNDRED AND TWENTY ", new NumberToWord().convert(1720));
 	}
 
 	@Test
@@ -99,7 +99,11 @@ public class NumberShouldBeConvertedToWord {
 
 	@Test
 	public void check_for_807_convert_nine_thousand_eight_hundred_seven() throws Exception {
-		System.out.println(new NumberToWord().convert(807));
 		assertEquals("EIGHT HUNDRED AND SEVEN ", new NumberToWord().convert(807));
+	}
+
+	@Test
+	public void check_for_1807_convert_one_thousand_nine_thousand_eight_hundred_seven() throws Exception {
+		assertEquals("ONE THOUSAND EIGHT HUNDRED AND SEVEN ", new NumberToWord().convert(1807));
 	}
 }
