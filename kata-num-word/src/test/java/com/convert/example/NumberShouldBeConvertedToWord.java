@@ -88,22 +88,23 @@ public class NumberShouldBeConvertedToWord {
 
 	@Test
 	public void check_for_1720_convert_one_thousand_seven_hundred_twenty() throws Exception {
+		System.out.println(new NumberToWord().convert(1720));
 		assertEquals("ONE THOUSAND SEVEN HUNDRED AND TWENTY ", new NumberToWord().convert(1720));
 	}
 
 	@Test
 	public void check_for_903_convert_nine_hundred_three() throws Exception {
-		assertEquals("NINE HUNDRED AND THREE ", new NumberToWord().convert(903));
+		assertEquals("NINE HUNDRED THREE ", new NumberToWord().convert(903));
 	}
 
 	@Test
 	public void check_for_807_convert_nine_thousand_eight_hundred_seven() throws Exception {
-		assertEquals("EIGHT HUNDRED AND SEVEN ", new NumberToWord().convert(807));
+		assertEquals("EIGHT HUNDRED SEVEN ", new NumberToWord().convert(807));
 	}
 
 	@Test
 	public void check_for_1807_convert_one_thousand_nine_thousand_eight_hundred_seven() throws Exception {
-		assertEquals("ONE THOUSAND EIGHT HUNDRED AND SEVEN ", new NumberToWord().convert(1807));
+		assertEquals("ONE THOUSAND EIGHT HUNDRED SEVEN ", new NumberToWord().convert(1807));
 	}
 	@Test
 	public void check_for_004_convert_four() throws Exception {

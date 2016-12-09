@@ -20,13 +20,12 @@ public class NumberToWord {
 		} else if (number < 1000) {
 			word = threeDigitWord(digit, ones, enty, maxs);
 		} else if (number >= 1000) {
-			word = fourDigitFourWord(digit, ones, enty, maxs);
+			word = fourDigitWord(digit, ones, enty, maxs);
 		}
 		return word;
 	}
 
-	private String fourDigitFourWord(char[] digit, String[] ones, String[] enty, String[] maxs) {
-		String and = "";
+	private String fourDigitWord(char[] digit, String[] ones, String[] enty, String[] maxs) {
 		int count = 0;
 		String word = "";
 		for (char charNum : digit) {
@@ -38,15 +37,11 @@ public class NumberToWord {
 					word += ones[Integer.parseInt(Character.toString(charNum))] + maxs[0];
 					count++;
 				} else if (count == 2) {
-					and = "AND ";
-					word += and + enty[Integer.parseInt(Character.toString(charNum)) - 2];
+					word += "AND " + enty[Integer.parseInt(Character.toString(charNum)) - 2];
 				} else if (Integer.parseInt(Character.toString(charNum)) != 0) {
-					word += and + ones[Integer.parseInt(Character.toString(charNum))];
+					word += ones[Integer.parseInt(Character.toString(charNum))];
 				}
 			} else {
-				if (!and.equals("AND ")) {
-					and = "AND ";
-				}
 				count++;
 			}
 
@@ -55,7 +50,6 @@ public class NumberToWord {
 	}
 
 	private String threeDigitWord(char[] digit, String[] ones, String[] enty, String[] maxs) {
-		String and = "";
 		int count = 0;
 		String word = "";
 		for (char charNum : digit) {
@@ -67,12 +61,9 @@ public class NumberToWord {
 					word += "AND " + enty[Integer.parseInt(Character.toString(charNum)) - 2];
 					count++;
 				} else if (Integer.parseInt(Character.toString(charNum)) != 0) {
-					word += and + ones[Integer.parseInt(Character.toString(charNum))];
+					word += ones[Integer.parseInt(Character.toString(charNum))];
 				}
 			} else {
-				if (!and.equals("AND ")) {
-					and = "AND ";
-				}
 				count++;
 			}
 
