@@ -73,7 +73,6 @@ public class NumberShouldBeConvertedToWord {
 
 	@Test
 	public void check_for_998_convert_nine_hundred_ninety() throws Exception {
-		System.out.println(new NumberToWord().convert(998));
 		assertEquals("NINE HUNDRED AND NINETY EIGHT ", new NumberToWord().convert(998));
 	}
 

@@ -16,16 +16,16 @@ public class NumberToWord {
 		} else if (number < 20) {
 			word = teen[number - 10];
 		} else if (number < 100) {
-			word = digitNumber(number, word, ones, enty, maxs);
+			word = digitToNumber(number, word, ones, enty, maxs);
 		} else if (number < 1000) {
-			word = digitNumber(number, word, ones, enty, maxs);
+			word = digitToNumber(number, word, ones, enty, maxs);
 		} else if (number >= 1000) {
-			word = digitNumber(number, word, ones, enty, maxs);
+			word = digitToNumber(number, word, ones, enty, maxs);
 		}
 		return word;
 	}
 
-	private String digitNumber(int number, String word, String[] ones, String[] enty, String[] maxs) {
+	private String digitToNumber(int number, String word, String[] ones, String[] enty, String[] maxs) {
 		char digit[] = (number + "").toCharArray();
 		String and = "";
 		int count = 0;
@@ -69,11 +69,12 @@ public class NumberToWord {
 						word += ones[Integer.parseInt(Character.toString(charNum))] + maxs[0];
 						count++;
 					} else if (count == 2) {
-						word +=  "AND "+enty[Integer.parseInt(Character.toString(charNum)) - 2];
+						and = "AND ";
+						word += and + enty[Integer.parseInt(Character.toString(charNum)) - 2];
 					} else if (Integer.parseInt(Character.toString(charNum)) != 0) {
-						word += and+ones[Integer.parseInt(Character.toString(charNum))];
+						word += and + ones[Integer.parseInt(Character.toString(charNum))];
 					}
-				}else{
+				} else {
 					if (!and.equals("AND ")) {
 						and = "AND ";
 					}
