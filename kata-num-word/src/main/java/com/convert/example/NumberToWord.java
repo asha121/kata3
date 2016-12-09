@@ -1,29 +1,25 @@
 package com.convert.example;
 
 /**
- * @author asha121
- *With recursion and member variable implementation
+ * @author asha121 With recursion and member variable implementation
  */
 public class NumberToWord {
 
 	public String convert(int number) {
 		String word = "";
-		String[] ones = { "0 NOT A POSTIVE INTEGER", "ONE ", "TWO ", "THREE ", "FOUR ", "FIVE ", "SIX ", "SEVEN ",
-				"EIGHT ", "NINE " };
-		String[] teen = { "TEN ", "ELEVEN ", "TWELVE ", "THIRTEEN ", "FOURTEEN ", "FIFTEEN ", "SIXTEEN ", "SEVENTEEN ",
-				"EIGHTEEN ", "NINETEEN" };
+		String[] onesAndTeen = { "0 NOT A POSTIVE INTEGER", "ONE ", "TWO ", "THREE ", "FOUR ", "FIVE ", "SIX ",
+				"SEVEN ", "EIGHT ", "NINE ", "TEN ", "ELEVEN ", "TWELVE ", "THIRTEEN ", "FOURTEEN ", "FIFTEEN ",
+				"SIXTEEN ", "SEVENTEEN ", "EIGHTEEN ", "NINETEEN" };
 		String[] enty = { "TWENTY ", "THIRTY ", "FORTY ", "FIFTY ", "SIXTY ", "SEVENTY ", "EIGHTY ", "NINETY " };
 		String[] maxs = { "HUNDRED ", "THOUSAND " };
-		if (number < 10) {
-			word = ones[number];
-		} else if (number < 20) {
-			word = teen[number - 10];
+		if (number < 20) {
+			word = onesAndTeen[number];
 		} else if (number < 100) {
-			word = twoDigitWord((number + "").toCharArray(), ones, enty);
+			word = twoDigitWord((number + "").toCharArray(), onesAndTeen, enty);
 		} else if (number < 1000) {
-			word = threeDigitWord((number + "").toCharArray(), ones, enty, maxs);
-		} else if (number >= 1000) {
-			word = fourDigitWord((number + "").toCharArray(), ones, enty, maxs);
+			word = threeDigitWord((number + "").toCharArray(), onesAndTeen, enty, maxs);
+		} else {
+			word = fourDigitWord((number + "").toCharArray(), onesAndTeen, enty, maxs);
 		}
 		return word;
 	}
