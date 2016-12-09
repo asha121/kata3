@@ -3,7 +3,7 @@ package com.convert.example;
 import static com.convert.example.DigitFactory.getInstance;
 
 /**
- * @author asha121 With recursion and member variable implementation
+ * @author asha121 Without recursion and member variable implementation
  */
 public class IntegerToWord {
 
