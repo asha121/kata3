@@ -97,12 +97,12 @@ public class IntegerToWordShould {
 	}
 
 	@Test
-	public void change_807_to_nine_thousand_eight_hundred_seven() {
+	public void change_807_to_eight_hundred_seven() {
 		assertEquals("EIGHT HUNDRED AND SEVEN ", new IntegerToWord().digitToWord(807));
 	}
 
 	@Test
-	public void change_1807_to_one_thousand_nine_thousand_eight_hundred_seven() {
+	public void change_1807_to_one_thousand_eight_hundred_seven() {
 		assertEquals("ONE THOUSAND EIGHT HUNDRED AND SEVEN ", new IntegerToWord().digitToWord(1807));
 	}
 
@@ -110,5 +110,4 @@ public class IntegerToWordShould {
 	public void change_004_to_four() {
 		assertEquals("FOUR ", new IntegerToWord().digitToWord(004));
 	}
-
 }
